@@ -14,10 +14,13 @@ function Rocket(){
    }
 
    this.show = function (){
-      translate(this.pos.x, this.pos.y)
+      push();
+      noStroke();
+      fill(255,150)
+      translate(this.pos.x, this.pos.y);
       rotate(this.vel.heading());
       rectMode(CENTER);
-      rect(0,0,50,10);
+      rect(0,0,10,5);
       pop();
    }
 }
